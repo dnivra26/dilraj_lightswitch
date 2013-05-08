@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <Manifests>
+    <Manifest>Microsoft.LightSwitch.Base.Client.Manifest.xml</Manifest>
+    <Manifest>Microsoft.LightSwitch.Client.Internal.Manifest.xml</Manifest>
+  </Manifests>
+  <SubsystemPackages>
+    <SubsystemPackage>ModelLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeExtensionLoader</SubsystemPackage>
+    <SubsystemPackage>PresentationRuntimeLoader</SubsystemPackage>
+    <SubsystemPackage>ReportingLoader</SubsystemPackage>
+    <SubsystemPackage>RulesLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeServicesLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeShellLoader</SubsystemPackage>
+    <SubsystemPackage>ThemingRuntimeLoader</SubsystemPackage>
+    <SubsystemPackage>UtilitiesLoader</SubsystemPackage>
+    <SubsystemPackage>BaseServicesLoader</SubsystemPackage>
+    <SubsystemPackage>DiagnosticsLoader</SubsystemPackage>
+    <SubsystemPackage>RuntimeUserCodeLoader</SubsystemPackage>
+  </SubsystemPackages>
+  <UserCodeAssemblies></UserCodeAssemblies>
+  <ExtensionAssemblies>
+    <ExtensionAssembly>Microsoft.LightSwitch.SdkProxy, Version=10.0.11.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>Microsoft.LightSwitch.Cosmopolitan.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>WebcamExtension.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>WebcamExtension.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>ImageTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=FB8EC453A8E30E6C</ExtensionAssembly>
+    <ExtensionAssembly>ImageTools.IO.Jpeg, Version=1.0.0.0, Culture=neutral, PublicKeyToken=FB8EC453A8E30E6C</ExtensionAssembly>
+    <ExtensionAssembly>ImageTools.IO.Png, Version=1.0.0.0, Culture=neutral, PublicKeyToken=FB8EC453A8E30E6C</ExtensionAssembly>
+    <ExtensionAssembly>ImageTools.Utils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=FB8EC453A8E30E6C</ExtensionAssembly>
+    <ExtensionAssembly>ICSharpCode.SharpZLib.Silverlight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5D294010D9F292B5</ExtensionAssembly>
+  </ExtensionAssemblies>
+</Configuration>
