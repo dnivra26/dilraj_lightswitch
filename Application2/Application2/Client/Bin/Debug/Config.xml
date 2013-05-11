@@ -31,4 +31,4 @@
     <ExtensionAssembly>ImageTools.Utils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=FB8EC453A8E30E6C</ExtensionAssembly>
     <ExtensionAssembly>ICSharpCode.SharpZLib.Silverlight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5D294010D9F292B5</ExtensionAssembly>
   <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Design.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</ExtensionAssembly><ExtensionAssembly>WebcamExtension.Client.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</ExtensionAssembly></ExtensionAssemblies>
-<ApplicationCulture>en-US</ApplicationCulture><ManifestTimeStamp>130125082626553483</ManifestTimeStamp><ApplicationName>Application2</ApplicationName><Version>1.0.0.0</Version><RootProjectGuid>a4f5ae15-6a0a-4ede-81c7-9ba455c50c4f</RootProjectGuid></Configuration>
+<ApplicationCulture>en-US</ApplicationCulture><ManifestTimeStamp>130127580336364958</ManifestTimeStamp><ApplicationName>Application2</ApplicationName><Version>1.0.0.0</Version><RootProjectGuid>a4f5ae15-6a0a-4ede-81c7-9ba455c50c4f</RootProjectGuid></Configuration>

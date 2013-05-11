@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-  <EntityType Name="Table1Item">
+  <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -17,8 +17,91 @@
     <Property Name="country" Type="Edm.String" Nullable="false" MaxLength="255" />
     <Property Name="zipcode" Type="Edm.Double" Nullable="false" />
     <Property Name="picture" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="Loans" Relationship="LightSwitchApplication.Customer_Loan" ToRole="Loan" FromRole="Customer" />
+    <NavigationProperty Name="Loan_Pays" Relationship="LightSwitchApplication.Customer_Loan_Pay" ToRole="Loan_Pay" FromRole="Customer" />
   </EntityType>
+  <EntityType Name="Loan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="loan_amount" Type="Edm.Int32" Nullable="false" />
+    <Property Name="interest" Type="Edm.Int32" Nullable="false" />
+    <Property Name="items" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="weight" Type="Edm.Double" Nullable="false" />
+    <Property Name="laon_date" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="note" Type="Edm.String" MaxLength="255" />
+    <Property Name="status" Type="Edm.String" Nullable="false" MaxLength="255" />
+    <Property Name="Customer_Loan" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="LightSwitchApplication.Customer_Loan" ToRole="Customer" FromRole="Loan" />
+    <NavigationProperty Name="Loan_Pay" Relationship="LightSwitchApplication.Loan_Loan_Pay" ToRole="Loan_Pay" FromRole="Loan" />
+  </EntityType>
+  <EntityType Name="Loan_Pay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="amount_paid" Type="Edm.Int32" Nullable="false" />
+    <Property Name="paid_date" Type="Edm.DateTime" Nullable="false" />
+    <Property Name="Customer_Loan_Pay" Type="Edm.Int32" Nullable="false" />
+    <NavigationProperty Name="Loan" Relationship="LightSwitchApplication.Loan_Loan_Pay" ToRole="Loan" FromRole="Loan_Pay" />
+    <NavigationProperty Name="Customer" Relationship="LightSwitchApplication.Customer_Loan_Pay" ToRole="Customer" FromRole="Loan_Pay" />
+  </EntityType>
+  <Association Name="Customer_Loan">
+    <End Role="Customer" Type="LightSwitchApplication.Customer" Multiplicity="1" />
+    <End Role="Loan" Type="LightSwitchApplication.Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loan">
+        <PropertyRef Name="Customer_Loan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Loan_Loan_Pay">
+    <End Role="Loan" Type="LightSwitchApplication.Loan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Loan_Pay" Type="LightSwitchApplication.Loan_Pay" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Loan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loan_Pay">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Customer_Loan_Pay">
+    <End Role="Customer" Type="LightSwitchApplication.Customer" Multiplicity="1" />
+    <End Role="Loan_Pay" Type="LightSwitchApplication.Loan_Pay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loan_Pay">
+        <PropertyRef Name="Customer_Loan_Pay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ApplicationDataObjectContext" m:IsDefaultEntityContainer="true">
-    <EntitySet Name="Table1Items" EntityType="LightSwitchApplication.Table1Item" />
+    <EntitySet Name="Customers" EntityType="LightSwitchApplication.Customer" />
+    <EntitySet Name="Loans" EntityType="LightSwitchApplication.Loan" />
+    <EntitySet Name="Loan_Pays" EntityType="LightSwitchApplication.Loan_Pay" />
+    <AssociationSet Name="Customer_Loan" Association="LightSwitchApplication.Customer_Loan">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Loan" EntitySet="Loans" />
+    </AssociationSet>
+    <AssociationSet Name="Loan_Loan_Pay" Association="LightSwitchApplication.Loan_Loan_Pay">
+      <End Role="Loan" EntitySet="Loans" />
+      <End Role="Loan_Pay" EntitySet="Loan_Pays" />
+    </AssociationSet>
+    <AssociationSet Name="Customer_Loan_Pay" Association="LightSwitchApplication.Customer_Loan_Pay">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Loan_Pay" EntitySet="Loan_Pays" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

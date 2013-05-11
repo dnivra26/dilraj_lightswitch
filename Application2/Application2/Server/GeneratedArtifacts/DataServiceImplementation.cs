@@ -37,14 +37,31 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
+        public global::System.Linq.IQueryable<global::ApplicationData.Implementation.Loan> Query1(string Idpar, string Parametera)
+        {
+            global::System.Linq.IQueryable<global::ApplicationData.Implementation.Loan> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::ApplicationData.Implementation.Loan>("Loans"),
+                (l) => (l.Customer.name.CompareTo(Idpar) == 0));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
         protected override object CreateObject(global::System.Type type)
         {
-            if (type == typeof(global::ApplicationData.Implementation.Table1Item))
+            if (type == typeof(global::ApplicationData.Implementation.Customer))
             {
-                return new global::ApplicationData.Implementation.Table1Item();
+                return new global::ApplicationData.Implementation.Customer();
+            }
+            if (type == typeof(global::ApplicationData.Implementation.Loan))
+            {
+                return new global::ApplicationData.Implementation.Loan();
+            }
+            if (type == typeof(global::ApplicationData.Implementation.Loan_Pay))
+            {
+                return new global::ApplicationData.Implementation.Loan_Pay();
             }
     
             return base.CreateObject(type);
@@ -61,9 +78,17 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.Internal.IEntityImplementation CreateEntityImplementation<T>()
         {
-            if (typeof(T) == typeof(global::LightSwitchApplication.Table1Item))
+            if (typeof(T) == typeof(global::LightSwitchApplication.Customer))
             {
-                return new global::ApplicationData.Implementation.Table1Item();
+                return new global::ApplicationData.Implementation.Customer();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Loan))
+            {
+                return new global::ApplicationData.Implementation.Loan();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Loan_Pay))
+            {
+                return new global::ApplicationData.Implementation.Loan_Pay();
             }
             return null;
         }
@@ -110,9 +135,17 @@ namespace LightSwitchApplication.Implementation
     {
         global::System.Type global::Microsoft.LightSwitch.Internal.ITypeMappingProvider.GetImplementationType(global::System.Type definitionType)
         {
-            if (typeof(global::LightSwitchApplication.Table1Item) == definitionType)
+            if (typeof(global::LightSwitchApplication.Customer) == definitionType)
             {
-                return typeof(global::ApplicationData.Implementation.Table1Item);
+                return typeof(global::ApplicationData.Implementation.Customer);
+            }
+            if (typeof(global::LightSwitchApplication.Loan) == definitionType)
+            {
+                return typeof(global::ApplicationData.Implementation.Loan);
+            }
+            if (typeof(global::LightSwitchApplication.Loan_Pay) == definitionType)
+            {
+                return typeof(global::ApplicationData.Implementation.Loan_Pay);
             }
             return null;
         }
@@ -124,10 +157,180 @@ namespace ApplicationData.Implementation
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public partial class Table1Item :
-        global::LightSwitchApplication.Table1Item.DetailsClass.IImplementation
+    public partial class Customer :
+        global::LightSwitchApplication.Customer.DetailsClass.IImplementation
     {
     
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Customer.DetailsClass.IImplementation.Loans
+        {
+            get
+            {
+                return this.Loans;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Customer.DetailsClass.IImplementation.Loan_Pays
+        {
+            get
+            {
+                return this.Loan_Pays;
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Loan :
+        global::LightSwitchApplication.Loan.DetailsClass.IImplementation
+    {
+    
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Loan.DetailsClass.IImplementation.Customer
+        {
+            get
+            {
+                return this.Customer;
+            }
+            set
+            {
+                this.Customer = (global::ApplicationData.Implementation.Customer)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Customer");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Loan.DetailsClass.IImplementation.Loan_Pay
+        {
+            get
+            {
+                return this.Loan_Pay;
+            }
+            set
+            {
+                this.Loan_Pay = (global::ApplicationData.Implementation.Loan_Pay)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Loan_Pay");
+                }
+            }
+        }
+        
+        partial void OnCustomer_LoanChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Customer");
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Loan_Pay :
+        global::LightSwitchApplication.Loan_Pay.DetailsClass.IImplementation
+    {
+    
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Loan_Pay.DetailsClass.IImplementation.Loan
+        {
+            get
+            {
+                return this.Loan;
+            }
+            set
+            {
+                this.Loan = (global::ApplicationData.Implementation.Loan)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Loan");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Loan_Pay.DetailsClass.IImplementation.Customer
+        {
+            get
+            {
+                return this.Customer;
+            }
+            set
+            {
+                this.Customer = (global::ApplicationData.Implementation.Customer)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Customer");
+                }
+            }
+        }
+        
+        partial void OnIdChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Loan");
+            }
+        }
+        
+        partial void OnCustomer_Loan_PayChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Customer");
+            }
+        }
+        
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

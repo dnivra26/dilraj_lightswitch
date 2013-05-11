@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Users\Arvind\documents\visual studio 2012\Projects\Application2\Application2\Client\Properties\Client.lsml" Checksum="B73FB909E1AAC791BCD6CD91ECAB4DFA825EBBE70F7E805A523548217043F140" />
-    <Document FullPath="C:\Users\Arvind\documents\visual studio 2012\Projects\Application2\Application2\Common\Properties\Common.lsml" Checksum="157BBFB08A2B372132AC95252CFFA92B4CCF93468B2586E07226426376D67B47" />
+    <Document FullPath="C:\Users\Arvind\documents\visual studio 2012\Projects\Application2\Application2\Client\Properties\Client.lsml" Checksum="6B95281A289C3932A2CC41DF77ABBE1890B0EF74C53504128B672DDCAF545287" />
+    <Document FullPath="C:\Users\Arvind\documents\visual studio 2012\Projects\Application2\Application2\Common\Properties\Common.lsml" Checksum="A7BE2DCF47A3A1333F1E0A525FD8647C4CD753379213133635F4BE966CC1662A" />
   </Documents>
 </ModelDocumentManifest>

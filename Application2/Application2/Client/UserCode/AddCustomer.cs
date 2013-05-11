@@ -17,7 +17,7 @@ namespace LightSwitchApplication
         partial void AddCustomer_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
         {
             // Write your code here.
-            this.Table1ItemProperty = new Table1Item();
+            this.Table1ItemProperty = new Customer();
         }
 
         partial void AddCustomer_Saved()

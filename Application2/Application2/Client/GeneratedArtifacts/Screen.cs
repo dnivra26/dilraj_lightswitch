@@ -78,7 +78,7 @@ namespace LightSwitchApplication
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Table1Item Table1ItemProperty
+        public global::LightSwitchApplication.Customer Table1ItemProperty
         {
             get 
             {
@@ -178,7 +178,7 @@ namespace LightSwitchApplication
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Data _Table1ItemProperty;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Data _Table1ItemProperty;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -187,11 +187,11 @@ namespace LightSwitchApplication
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Table1Item> Table1ItemProperty
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Customer> Table1ItemProperty
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>)base.GetItem(global::LightSwitchApplication.AddCustomer.DetailsClass.PropertySetProperties.Table1ItemProperty);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Customer>)base.GetItem(global::LightSwitchApplication.AddCustomer.DetailsClass.PropertySetProperties.Table1ItemProperty);
                     }
                 }
 
@@ -219,14 +219,14 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Entry
-                    Table1ItemProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Table1ItemProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
                         "Table1ItemProperty",
                         false,
                         global::LightSwitchApplication.AddCustomer.DetailsClass.PropertySetProperties._Table1ItemProperty_Stub,
                         global::LightSwitchApplication.AddCustomer.DetailsClass.PropertySetProperties._Table1ItemProperty_Validate,
                         global::LightSwitchApplication.AddCustomer.DetailsClass.PropertySetProperties._Table1ItemProperty_OnValueChanged);
-                private static void _Table1ItemProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddCustomer.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Data> c, global::LightSwitchApplication.AddCustomer.DetailsClass d, object sf)
+                private static void _Table1ItemProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.AddCustomer.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.AddCustomer, global::LightSwitchApplication.AddCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.AddCustomer.DetailsClass d, object sf)
                 {
                     c(d, ref d._Table1ItemProperty, sf);
                 }
@@ -333,7 +333,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Table1Item> Table1Items
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Customer> Table1Items
         {
             get
             {
@@ -430,11 +430,11 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.IDataServiceQueryable Table1ItemsQuery()
             {
-                return this.Screen.DataWorkspace.ApplicationData.Table1Items;
+                return this.Screen.DataWorkspace.ApplicationData.Customers;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Data _Table1Items;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Data _Table1Items;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -443,11 +443,11 @@ namespace LightSwitchApplication
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Table1Item> Table1Items
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Customer> Table1Items
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>)base.GetItem(global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties.Table1Items);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Customer>)base.GetItem(global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties.Table1Items);
                     }
                 }
 
@@ -475,8 +475,8 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Entry
-                    Table1Items = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Table1Items = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
                         "Table1Items",
                         global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties._Table1Items_Stub,
                         global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties._Table1Items_Validate,
@@ -484,7 +484,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties._Table1Items_SelectionChanged,
                         global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties._Table1Items_OnCollectionChanged,
                         global::LightSwitchApplication.SearchCustomer.DetailsClass.PropertySetProperties._Table1Items_OnLoaded);
-                private static void _Table1Items_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchCustomer.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Table1Item>.Data> c, global::LightSwitchApplication.SearchCustomer.DetailsClass d, object sf)
+                private static void _Table1Items_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SearchCustomer.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SearchCustomer, global::LightSwitchApplication.SearchCustomer.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.SearchCustomer.DetailsClass d, object sf)
                 {
                     c(d, ref d._Table1Items, sf);
                 }
@@ -603,7 +603,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Table1Item> Table1Items
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Customer> Table1Items
         {
             get
             {
@@ -700,11 +700,11 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.IDataServiceQueryable Table1ItemsQuery()
             {
-                return this.Screen.DataWorkspace.ApplicationData.Table1Items;
+                return this.Screen.DataWorkspace.ApplicationData.Customers;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Table1Item>.Data _Table1Items;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Customer>.Data _Table1Items;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -713,11 +713,11 @@ namespace LightSwitchApplication
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Table1Item> Table1Items
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Customer> Table1Items
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Table1Item>)base.GetItem(global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties.Table1Items);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Customer>)base.GetItem(global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties.Table1Items);
                     }
                 }
 
@@ -745,8 +745,8 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Table1Item>.Entry
-                    Table1Items = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Table1Item>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Table1Items = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
                         "Table1Items",
                         global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties._Table1Items_Stub,
                         global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties._Table1Items_Validate,
@@ -754,7 +754,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties._Table1Items_SelectionChanged,
                         global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties._Table1Items_OnCollectionChanged,
                         global::LightSwitchApplication.CustomerList.DetailsClass.PropertySetProperties._Table1Items_OnLoaded);
-                private static void _Table1Items_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CustomerList.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Table1Item>.Data> c, global::LightSwitchApplication.CustomerList.DetailsClass d, object sf)
+                private static void _Table1Items_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CustomerList.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.CustomerList, global::LightSwitchApplication.CustomerList.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.CustomerList.DetailsClass d, object sf)
                 {
                     c(d, ref d._Table1Items, sf);
                 }
@@ -777,6 +777,991 @@ namespace LightSwitchApplication
                 private static void _Table1Items_OnLoaded(global::LightSwitchApplication.CustomerList s, bool succeeded)
                 {
                     s.Table1Items_Loaded(succeeded);
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class NewLoan
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private NewLoan() : base("LightSwitchApplication:NewLoan")
+        {
+            global::LightSwitchApplication.NewLoan.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static NewLoan CreateInstance()
+        {
+            return new global::LightSwitchApplication.NewLoan(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NewLoan_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void LoanProperty_Changed();
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Loan LoanProperty
+        {
+            get 
+            {
+                return global::LightSwitchApplication.NewLoan.DetailsClass.GetValue(this, global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties.LoanProperty);
+            }
+            set
+            {
+                global::LightSwitchApplication.NewLoan.DetailsClass.SetValue(this, global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties.LoanProperty, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.NewLoan.DetailsClass.PropertySet, global::LightSwitchApplication.NewLoan.DetailsClass.CommandSet, global::LightSwitchApplication.NewLoan.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties.LoanProperty;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass>.Entry
+                __NewLoanEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass>.Entry(
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeSavingEvent,
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeSavedEvent,
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeClosingEvent,
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeCreated,
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeActivated,
+                    global::LightSwitchApplication.NewLoan.DetailsClass.__NewLoan_InvokeSaveErrorEvent);
+            private static void __NewLoan_InvokeInitializeDataWorkspace(global::LightSwitchApplication.NewLoan s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.NewLoan_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __NewLoan_InvokeSavingEvent(global::LightSwitchApplication.NewLoan s)
+            {
+                bool handled = false;
+                s.NewLoan_Saving(ref handled);
+                return handled;
+            }
+            private static void __NewLoan_InvokeSavedEvent(global::LightSwitchApplication.NewLoan s)
+            {
+                s.NewLoan_Saved();
+            }
+            private static bool __NewLoan_InvokeClosingEvent(global::LightSwitchApplication.NewLoan s)
+            {
+                bool cancel = false;
+                s.NewLoan_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __NewLoan_InvokeCreated(global::LightSwitchApplication.NewLoan s)
+            {
+                s.NewLoan_Created();
+            }
+            private static void __NewLoan_InvokeActivated(global::LightSwitchApplication.NewLoan s)
+            {
+                s.NewLoan_Activated();
+            }
+            private static bool __NewLoan_InvokeSaveErrorEvent(global::LightSwitchApplication.NewLoan s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.NewLoan_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.NewLoan.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.NewLoan.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.NewLoan.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.Loan>.Data _LoanProperty;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.Loan> LoanProperty
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.Loan>)base.GetItem(global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties.LoanProperty);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.Loan>.Entry
+                    LoanProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.Loan>.Entry(
+                        "LoanProperty",
+                        false,
+                        global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties._LoanProperty_Stub,
+                        global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties._LoanProperty_Validate,
+                        global::LightSwitchApplication.NewLoan.DetailsClass.PropertySetProperties._LoanProperty_OnValueChanged);
+                private static void _LoanProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.NewLoan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.NewLoan, global::LightSwitchApplication.NewLoan.DetailsClass, global::LightSwitchApplication.Loan>.Data> c, global::LightSwitchApplication.NewLoan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._LoanProperty, sf);
+                }
+                private static void _LoanProperty_Validate(global::LightSwitchApplication.NewLoan s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.LoanProperty_Validate(r);
+                }
+                private static void _LoanProperty_OnValueChanged(global::LightSwitchApplication.NewLoan s)
+                {
+                    s.LoanProperty_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class LoanList
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private LoanList() : base("LightSwitchApplication:LoanList")
+        {
+            global::LightSwitchApplication.LoanList.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static LoanList CreateInstance()
+        {
+            return new global::LightSwitchApplication.LoanList(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void LoanList_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Loans_SelectionChanged();
+
+        partial void Loans_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Loans_Loaded(bool succeeded);
+
+        /// <summary>
+        /// Gets the Loans visual collection. The collection contains all records currently shown on the respective list or grid control.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Loan> Loans
+        {
+            get
+            {
+                return global::LightSwitchApplication.LoanList.DetailsClass.GetValue(this, global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties.Loans);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Loans_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.LoanList.DetailsClass.PropertySet, global::LightSwitchApplication.LoanList.DetailsClass.CommandSet, global::LightSwitchApplication.LoanList.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties.Loans;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass>.Entry
+                __LoanListEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass>.Entry(
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeSavingEvent,
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeSavedEvent,
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeClosingEvent,
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeCreated,
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeActivated,
+                    global::LightSwitchApplication.LoanList.DetailsClass.__LoanList_InvokeSaveErrorEvent);
+            private static void __LoanList_InvokeInitializeDataWorkspace(global::LightSwitchApplication.LoanList s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.LoanList_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __LoanList_InvokeSavingEvent(global::LightSwitchApplication.LoanList s)
+            {
+                bool handled = false;
+                s.LoanList_Saving(ref handled);
+                return handled;
+            }
+            private static void __LoanList_InvokeSavedEvent(global::LightSwitchApplication.LoanList s)
+            {
+                s.LoanList_Saved();
+            }
+            private static bool __LoanList_InvokeClosingEvent(global::LightSwitchApplication.LoanList s)
+            {
+                bool cancel = false;
+                s.LoanList_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __LoanList_InvokeCreated(global::LightSwitchApplication.LoanList s)
+            {
+                s.LoanList_Created();
+            }
+            private static void __LoanList_InvokeActivated(global::LightSwitchApplication.LoanList s)
+            {
+                s.LoanList_Activated();
+            }
+            private static bool __LoanList_InvokeSaveErrorEvent(global::LightSwitchApplication.LoanList s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.LoanList_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.LoanList.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.LoanList.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.LoanList.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable LoansQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                    this.Screen.DataWorkspace.ApplicationData.Loans,
+                    "Customer");
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.Loan>.Data _Loans;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.Loan> Loans
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.Loan>)base.GetItem(global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties.Loans);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.Loan>.Entry
+                    Loans = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.Loan>.Entry(
+                        "Loans",
+                        global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties._Loans_Stub,
+                        global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties._Loans_Validate,
+                        global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties._Loans_CreateQuery,
+                        global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties._Loans_SelectionChanged,
+                        global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties._Loans_OnCollectionChanged,
+                        global::LightSwitchApplication.LoanList.DetailsClass.PropertySetProperties._Loans_OnLoaded);
+                private static void _Loans_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.LoanList.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.LoanList, global::LightSwitchApplication.LoanList.DetailsClass, global::LightSwitchApplication.Loan>.Data> c, global::LightSwitchApplication.LoanList.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Loans, sf);
+                }
+                private static void _Loans_Validate(global::LightSwitchApplication.LoanList s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Loans_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Loans_CreateQuery(global::LightSwitchApplication.LoanList.DetailsClass d, object[] args)
+                {
+                    return d.LoansQuery();
+                }
+                private static void _Loans_SelectionChanged(global::LightSwitchApplication.LoanList s)
+                {
+                    s.Loans_SelectionChanged();
+                }
+                private static void _Loans_OnCollectionChanged(global::LightSwitchApplication.LoanList s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Loans_Changed(e);
+                }
+                private static void _Loans_OnLoaded(global::LightSwitchApplication.LoanList s, bool succeeded)
+                {
+                    s.Loans_Loaded(succeeded);
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class PayLoan
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private PayLoan() : base("LightSwitchApplication:PayLoan")
+        {
+            global::LightSwitchApplication.PayLoan.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static PayLoan CreateInstance()
+        {
+            return new global::LightSwitchApplication.PayLoan(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PayLoan_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Loan_PayProperty_Changed();
+
+        partial void Query1_SelectionChanged();
+
+        partial void Query1_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query1_Loaded(bool succeeded);
+
+        partial void Property1_Changed();
+
+        partial void Property2_Changed();
+
+        partial void Property3_Changed();
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Loan_Pay Loan_PayProperty
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PayLoan.DetailsClass.GetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Loan_PayProperty);
+            }
+            set
+            {
+                global::LightSwitchApplication.PayLoan.DetailsClass.SetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Loan_PayProperty, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Loan_PayProperty_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Gets the Query1 visual collection. The collection contains all records currently shown on the respective list or grid control.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.Loan> Query1
+        {
+            get
+            {
+                return global::LightSwitchApplication.PayLoan.DetailsClass.GetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Query1);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query1_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Customer Property1
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PayLoan.DetailsClass.GetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property1);
+            }
+            set
+            {
+                global::LightSwitchApplication.PayLoan.DetailsClass.SetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property1, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Property1_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Loan_Pay Property2
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PayLoan.DetailsClass.GetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property2);
+            }
+            set
+            {
+                global::LightSwitchApplication.PayLoan.DetailsClass.SetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property2, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Property2_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Property3
+        {
+            get 
+            {
+                return global::LightSwitchApplication.PayLoan.DetailsClass.GetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property3);
+            }
+            set
+            {
+                global::LightSwitchApplication.PayLoan.DetailsClass.SetValue(this, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property3, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Property3_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.PayLoan.DetailsClass.PropertySet, global::LightSwitchApplication.PayLoan.DetailsClass.CommandSet, global::LightSwitchApplication.PayLoan.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Loan_PayProperty;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass>.Entry
+                __PayLoanEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeSavingEvent,
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeSavedEvent,
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeClosingEvent,
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeCreated,
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeActivated,
+                    global::LightSwitchApplication.PayLoan.DetailsClass.__PayLoan_InvokeSaveErrorEvent);
+            private static void __PayLoan_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PayLoan s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.PayLoan_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __PayLoan_InvokeSavingEvent(global::LightSwitchApplication.PayLoan s)
+            {
+                bool handled = false;
+                s.PayLoan_Saving(ref handled);
+                return handled;
+            }
+            private static void __PayLoan_InvokeSavedEvent(global::LightSwitchApplication.PayLoan s)
+            {
+                s.PayLoan_Saved();
+            }
+            private static bool __PayLoan_InvokeClosingEvent(global::LightSwitchApplication.PayLoan s)
+            {
+                bool cancel = false;
+                s.PayLoan_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __PayLoan_InvokeCreated(global::LightSwitchApplication.PayLoan s)
+            {
+                s.PayLoan_Created();
+            }
+            private static void __PayLoan_InvokeActivated(global::LightSwitchApplication.PayLoan s)
+            {
+                s.PayLoan_Activated();
+            }
+            private static bool __PayLoan_InvokeSaveErrorEvent(global::LightSwitchApplication.PayLoan s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.PayLoan_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.PayLoan.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.PayLoan.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.PayLoan.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable Query1Query(string Idpar, string Parametera)
+            {
+                return this.Screen.DataWorkspace.ApplicationData.Query1(Idpar, Parametera);
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Data _Loan_PayProperty;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan>.Data _Query1;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Customer>.Data _Property1;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Data _Property2;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, string>.Data _Property3;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay> Loan_PayProperty
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>)base.GetItem(global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Loan_PayProperty);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan> Query1
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan>)base.GetItem(global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Query1);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Customer> Property1
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Customer>)base.GetItem(global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property1);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay> Property2
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>)base.GetItem(global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property2);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, string> Property3
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties.Property3);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Entry
+                    Loan_PayProperty = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Entry(
+                        "Loan_PayProperty",
+                        false,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Loan_PayProperty_Stub,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Loan_PayProperty_Validate,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Loan_PayProperty_OnValueChanged);
+                private static void _Loan_PayProperty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PayLoan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Data> c, global::LightSwitchApplication.PayLoan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Loan_PayProperty, sf);
+                }
+                private static void _Loan_PayProperty_Validate(global::LightSwitchApplication.PayLoan s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Loan_PayProperty_Validate(r);
+                }
+                private static void _Loan_PayProperty_OnValueChanged(global::LightSwitchApplication.PayLoan s)
+                {
+                    s.Loan_PayProperty_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan>.Entry
+                    Query1 = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan>.Entry(
+                        "Query1",
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Query1_Stub,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Query1_Validate,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Query1_CreateQuery,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Query1_SelectionChanged,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Query1_OnCollectionChanged,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Query1_OnLoaded);
+                private static void _Query1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PayLoan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan>.Data> c, global::LightSwitchApplication.PayLoan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Query1, sf);
+                }
+                private static void _Query1_Validate(global::LightSwitchApplication.PayLoan s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Query1_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Query1_CreateQuery(global::LightSwitchApplication.PayLoan.DetailsClass d, object[] args)
+                {
+                    return d.Query1Query((string)args[0], (string)args[1]);
+                }
+                private static void _Query1_SelectionChanged(global::LightSwitchApplication.PayLoan s)
+                {
+                    s.Query1_SelectionChanged();
+                }
+                private static void _Query1_OnCollectionChanged(global::LightSwitchApplication.PayLoan s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Query1_Changed(e);
+                }
+                private static void _Query1_OnLoaded(global::LightSwitchApplication.PayLoan s, bool succeeded)
+                {
+                    s.Query1_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Customer>.Entry
+                    Property1 = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Customer>.Entry(
+                        "Property1",
+                        false,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property1_Stub,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property1_Validate,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property1_OnValueChanged);
+                private static void _Property1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PayLoan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Customer>.Data> c, global::LightSwitchApplication.PayLoan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Property1, sf);
+                }
+                private static void _Property1_Validate(global::LightSwitchApplication.PayLoan s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Property1_Validate(r);
+                }
+                private static void _Property1_OnValueChanged(global::LightSwitchApplication.PayLoan s)
+                {
+                    s.Property1_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Entry
+                    Property2 = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Entry(
+                        "Property2",
+                        false,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property2_Stub,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property2_Validate,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property2_OnValueChanged);
+                private static void _Property2_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PayLoan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, global::LightSwitchApplication.Loan_Pay>.Data> c, global::LightSwitchApplication.PayLoan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Property2, sf);
+                }
+                private static void _Property2_Validate(global::LightSwitchApplication.PayLoan s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Property2_Validate(r);
+                }
+                private static void _Property2_OnValueChanged(global::LightSwitchApplication.PayLoan s)
+                {
+                    s.Property2_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, string>.Entry
+                    Property3 = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, string>.Entry(
+                        "Property3",
+                        false,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property3_Stub,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property3_Validate,
+                        global::LightSwitchApplication.PayLoan.DetailsClass.PropertySetProperties._Property3_OnValueChanged);
+                private static void _Property3_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PayLoan.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.PayLoan, global::LightSwitchApplication.PayLoan.DetailsClass, string>.Data> c, global::LightSwitchApplication.PayLoan.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Property3, sf);
+                }
+                private static void _Property3_Validate(global::LightSwitchApplication.PayLoan s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Property3_Validate(r);
+                }
+                private static void _Property3_OnValueChanged(global::LightSwitchApplication.PayLoan s)
+                {
+                    s.Property3_Changed();
                 }
 
             }

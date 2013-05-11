@@ -17,6 +17,14 @@ using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
+#region EDM Relationship Metadata
+
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Customer_Loan", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ApplicationData.Implementation.Customer), "Loan", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ApplicationData.Implementation.Loan), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Loan_Loan_Pay", "Loan", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ApplicationData.Implementation.Loan), "Loan_Pay", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ApplicationData.Implementation.Loan_Pay), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "Customer_Loan_Pay", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ApplicationData.Implementation.Customer), "Loan_Pay", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ApplicationData.Implementation.Loan_Pay), true)]
+
+#endregion
+
 namespace ApplicationData.Implementation
 {
     #region Contexts
@@ -65,29 +73,77 @@ namespace ApplicationData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Table1Item> Table1Items
+        public ObjectSet<Customer> Customers
         {
             get
             {
-                if ((_Table1Items == null))
+                if ((_Customers == null))
                 {
-                    _Table1Items = base.CreateObjectSet<Table1Item>("Table1Items");
+                    _Customers = base.CreateObjectSet<Customer>("Customers");
                 }
-                return _Table1Items;
+                return _Customers;
             }
         }
-        private ObjectSet<Table1Item> _Table1Items;
+        private ObjectSet<Customer> _Customers;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Loan> Loans
+        {
+            get
+            {
+                if ((_Loans == null))
+                {
+                    _Loans = base.CreateObjectSet<Loan>("Loans");
+                }
+                return _Loans;
+            }
+        }
+        private ObjectSet<Loan> _Loans;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Loan_Pay> Loan_Pays
+        {
+            get
+            {
+                if ((_Loan_Pays == null))
+                {
+                    _Loan_Pays = base.CreateObjectSet<Loan_Pay>("Loan_Pays");
+                }
+                return _Loan_Pays;
+            }
+        }
+        private ObjectSet<Loan_Pay> _Loan_Pays;
 
         #endregion
 
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Table1Items EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Customers EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToTable1Items(Table1Item table1Item)
+        public void AddToCustomers(Customer customer)
         {
-            base.AddObject("Table1Items", table1Item);
+            base.AddObject("Customers", customer);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Loans EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToLoans(Loan loan)
+        {
+            base.AddObject("Loans", loan);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Loan_Pays EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToLoan_Pays(Loan_Pay loan_Pay)
+        {
+            base.AddObject("Loan_Pays", loan_Pay);
         }
 
         #endregion
@@ -101,15 +157,15 @@ namespace ApplicationData.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Table1Item")]
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Customer")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Table1Item : EntityObject
+    public partial class Customer : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new Table1Item object.
+        /// Create a new Customer object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="rowVersion">Initial value of the RowVersion property.</param>
@@ -122,21 +178,21 @@ namespace ApplicationData.Implementation
         /// <param name="state">Initial value of the state property.</param>
         /// <param name="country">Initial value of the country property.</param>
         /// <param name="zipcode">Initial value of the zipcode property.</param>
-        public static Table1Item CreateTable1Item(global::System.Int32 id, global::System.Byte[] rowVersion, global::System.String name, global::System.String father_name, global::System.DateTime dob, global::System.String phone, global::System.String address1, global::System.String city, global::System.String state, global::System.String country, global::System.Double zipcode)
+        public static Customer CreateCustomer(global::System.Int32 id, global::System.Byte[] rowVersion, global::System.String name, global::System.String father_name, global::System.DateTime dob, global::System.String phone, global::System.String address1, global::System.String city, global::System.String state, global::System.String country, global::System.Double zipcode)
         {
-            Table1Item table1Item = new Table1Item();
-            table1Item.Id = id;
-            table1Item.RowVersion = rowVersion;
-            table1Item.name = name;
-            table1Item.father_name = father_name;
-            table1Item.dob = dob;
-            table1Item.phone = phone;
-            table1Item.address1 = address1;
-            table1Item.city = city;
-            table1Item.state = state;
-            table1Item.country = country;
-            table1Item.zipcode = zipcode;
-            return table1Item;
+            Customer customer = new Customer();
+            customer.Id = id;
+            customer.RowVersion = rowVersion;
+            customer.name = name;
+            customer.father_name = father_name;
+            customer.dob = dob;
+            customer.phone = phone;
+            customer.address1 = address1;
+            customer.city = city;
+            customer.state = state;
+            customer.country = country;
+            customer.zipcode = zipcode;
+            return customer;
         }
 
         #endregion
@@ -461,6 +517,664 @@ namespace ApplicationData.Implementation
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "Customer_Loan", "Loan")]
+        public EntityCollection<Loan> Loans
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Loan>("LightSwitchApplication.Customer_Loan", "Loan");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Loan>("LightSwitchApplication.Customer_Loan", "Loan", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "Customer_Loan_Pay", "Loan_Pay")]
+        public EntityCollection<Loan_Pay> Loan_Pays
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Loan_Pay>("LightSwitchApplication.Customer_Loan_Pay", "Loan_Pay");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Loan_Pay>("LightSwitchApplication.Customer_Loan_Pay", "Loan_Pay", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Loan")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Loan : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Loan object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="rowVersion">Initial value of the RowVersion property.</param>
+        /// <param name="loan_amount">Initial value of the loan_amount property.</param>
+        /// <param name="interest">Initial value of the interest property.</param>
+        /// <param name="items">Initial value of the items property.</param>
+        /// <param name="weight">Initial value of the weight property.</param>
+        /// <param name="laon_date">Initial value of the laon_date property.</param>
+        /// <param name="status">Initial value of the status property.</param>
+        /// <param name="customer_Loan">Initial value of the Customer_Loan property.</param>
+        public static Loan CreateLoan(global::System.Int32 id, global::System.Byte[] rowVersion, global::System.Int32 loan_amount, global::System.Int32 interest, global::System.String items, global::System.Double weight, global::System.DateTime laon_date, global::System.String status, global::System.Int32 customer_Loan)
+        {
+            Loan loan = new Loan();
+            loan.Id = id;
+            loan.RowVersion = rowVersion;
+            loan.loan_amount = loan_amount;
+            loan.interest = interest;
+            loan.items = items;
+            loan.weight = weight;
+            loan.laon_date = laon_date;
+            loan.status = status;
+            loan.Customer_Loan = customer_Loan;
+            return loan;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] RowVersion
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_RowVersion);
+            }
+            set
+            {
+                OnRowVersionChanging(value);
+                ReportPropertyChanging("RowVersion");
+                _RowVersion = value;
+                ReportPropertyChanged("RowVersion");
+                OnRowVersionChanged();
+            }
+        }
+        private global::System.Byte[] _RowVersion;
+        partial void OnRowVersionChanging(global::System.Byte[] value);
+        partial void OnRowVersionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 loan_amount
+        {
+            get
+            {
+                return _loan_amount;
+            }
+            set
+            {
+                Onloan_amountChanging(value);
+                ReportPropertyChanging("loan_amount");
+                _loan_amount = value;
+                ReportPropertyChanged("loan_amount");
+                Onloan_amountChanged();
+            }
+        }
+        private global::System.Int32 _loan_amount;
+        partial void Onloan_amountChanging(global::System.Int32 value);
+        partial void Onloan_amountChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 interest
+        {
+            get
+            {
+                return _interest;
+            }
+            set
+            {
+                OninterestChanging(value);
+                ReportPropertyChanging("interest");
+                _interest = value;
+                ReportPropertyChanged("interest");
+                OninterestChanged();
+            }
+        }
+        private global::System.Int32 _interest;
+        partial void OninterestChanging(global::System.Int32 value);
+        partial void OninterestChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String items
+        {
+            get
+            {
+                return _items;
+            }
+            set
+            {
+                OnitemsChanging(value);
+                ReportPropertyChanging("items");
+                _items = value;
+                ReportPropertyChanged("items");
+                OnitemsChanged();
+            }
+        }
+        private global::System.String _items;
+        partial void OnitemsChanging(global::System.String value);
+        partial void OnitemsChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Double weight
+        {
+            get
+            {
+                return _weight;
+            }
+            set
+            {
+                OnweightChanging(value);
+                ReportPropertyChanging("weight");
+                _weight = value;
+                ReportPropertyChanged("weight");
+                OnweightChanged();
+            }
+        }
+        private global::System.Double _weight;
+        partial void OnweightChanging(global::System.Double value);
+        partial void OnweightChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime laon_date
+        {
+            get
+            {
+                return _laon_date;
+            }
+            set
+            {
+                Onlaon_dateChanging(value);
+                ReportPropertyChanging("laon_date");
+                _laon_date = value;
+                ReportPropertyChanged("laon_date");
+                Onlaon_dateChanged();
+            }
+        }
+        private global::System.DateTime _laon_date;
+        partial void Onlaon_dateChanging(global::System.DateTime value);
+        partial void Onlaon_dateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String note
+        {
+            get
+            {
+                return _note;
+            }
+            set
+            {
+                OnnoteChanging(value);
+                ReportPropertyChanging("note");
+                _note = value;
+                ReportPropertyChanged("note");
+                OnnoteChanged();
+            }
+        }
+        private global::System.String _note;
+        partial void OnnoteChanging(global::System.String value);
+        partial void OnnoteChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String status
+        {
+            get
+            {
+                return _status;
+            }
+            set
+            {
+                OnstatusChanging(value);
+                ReportPropertyChanging("status");
+                _status = value;
+                ReportPropertyChanged("status");
+                OnstatusChanged();
+            }
+        }
+        private global::System.String _status;
+        partial void OnstatusChanging(global::System.String value);
+        partial void OnstatusChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Customer_Loan
+        {
+            get
+            {
+                return _Customer_Loan;
+            }
+            set
+            {
+                OnCustomer_LoanChanging(value);
+                ReportPropertyChanging("Customer_Loan");
+                _Customer_Loan = value;
+                ReportPropertyChanged("Customer_Loan");
+                OnCustomer_LoanChanged();
+            }
+        }
+        private global::System.Int32 _Customer_Loan;
+        partial void OnCustomer_LoanChanging(global::System.Int32 value);
+        partial void OnCustomer_LoanChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "Customer_Loan", "Customer")]
+        public Customer Customer
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("LightSwitchApplication.Customer_Loan", "Customer").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("LightSwitchApplication.Customer_Loan", "Customer").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Customer> CustomerReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("LightSwitchApplication.Customer_Loan", "Customer");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("LightSwitchApplication.Customer_Loan", "Customer", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "Loan_Loan_Pay", "Loan_Pay")]
+        public Loan_Pay Loan_Pay
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Loan_Pay>("LightSwitchApplication.Loan_Loan_Pay", "Loan_Pay").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Loan_Pay>("LightSwitchApplication.Loan_Loan_Pay", "Loan_Pay").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Loan_Pay> Loan_PayReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Loan_Pay>("LightSwitchApplication.Loan_Loan_Pay", "Loan_Pay");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Loan_Pay>("LightSwitchApplication.Loan_Loan_Pay", "Loan_Pay", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Loan_Pay")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Loan_Pay : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Loan_Pay object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="rowVersion">Initial value of the RowVersion property.</param>
+        /// <param name="amount_paid">Initial value of the amount_paid property.</param>
+        /// <param name="paid_date">Initial value of the paid_date property.</param>
+        /// <param name="customer_Loan_Pay">Initial value of the Customer_Loan_Pay property.</param>
+        public static Loan_Pay CreateLoan_Pay(global::System.Int32 id, global::System.Byte[] rowVersion, global::System.Int32 amount_paid, global::System.DateTime paid_date, global::System.Int32 customer_Loan_Pay)
+        {
+            Loan_Pay loan_Pay = new Loan_Pay();
+            loan_Pay.Id = id;
+            loan_Pay.RowVersion = rowVersion;
+            loan_Pay.amount_paid = amount_paid;
+            loan_Pay.paid_date = paid_date;
+            loan_Pay.Customer_Loan_Pay = customer_Loan_Pay;
+            return loan_Pay;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] RowVersion
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_RowVersion);
+            }
+            set
+            {
+                OnRowVersionChanging(value);
+                ReportPropertyChanging("RowVersion");
+                _RowVersion = value;
+                ReportPropertyChanged("RowVersion");
+                OnRowVersionChanged();
+            }
+        }
+        private global::System.Byte[] _RowVersion;
+        partial void OnRowVersionChanging(global::System.Byte[] value);
+        partial void OnRowVersionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 amount_paid
+        {
+            get
+            {
+                return _amount_paid;
+            }
+            set
+            {
+                Onamount_paidChanging(value);
+                ReportPropertyChanging("amount_paid");
+                _amount_paid = value;
+                ReportPropertyChanged("amount_paid");
+                Onamount_paidChanged();
+            }
+        }
+        private global::System.Int32 _amount_paid;
+        partial void Onamount_paidChanging(global::System.Int32 value);
+        partial void Onamount_paidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime paid_date
+        {
+            get
+            {
+                return _paid_date;
+            }
+            set
+            {
+                Onpaid_dateChanging(value);
+                ReportPropertyChanging("paid_date");
+                _paid_date = value;
+                ReportPropertyChanged("paid_date");
+                Onpaid_dateChanged();
+            }
+        }
+        private global::System.DateTime _paid_date;
+        partial void Onpaid_dateChanging(global::System.DateTime value);
+        partial void Onpaid_dateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Customer_Loan_Pay
+        {
+            get
+            {
+                return _Customer_Loan_Pay;
+            }
+            set
+            {
+                OnCustomer_Loan_PayChanging(value);
+                ReportPropertyChanging("Customer_Loan_Pay");
+                _Customer_Loan_Pay = value;
+                ReportPropertyChanged("Customer_Loan_Pay");
+                OnCustomer_Loan_PayChanged();
+            }
+        }
+        private global::System.Int32 _Customer_Loan_Pay;
+        partial void OnCustomer_Loan_PayChanging(global::System.Int32 value);
+        partial void OnCustomer_Loan_PayChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "Loan_Loan_Pay", "Loan")]
+        public Loan Loan
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Loan>("LightSwitchApplication.Loan_Loan_Pay", "Loan").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Loan>("LightSwitchApplication.Loan_Loan_Pay", "Loan").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Loan> LoanReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Loan>("LightSwitchApplication.Loan_Loan_Pay", "Loan");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Loan>("LightSwitchApplication.Loan_Loan_Pay", "Loan", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "Customer_Loan_Pay", "Customer")]
+        public Customer Customer
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("LightSwitchApplication.Customer_Loan_Pay", "Customer").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("LightSwitchApplication.Customer_Loan_Pay", "Customer").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Customer> CustomerReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("LightSwitchApplication.Customer_Loan_Pay", "Customer");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("LightSwitchApplication.Customer_Loan_Pay", "Customer", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
 
     #endregion

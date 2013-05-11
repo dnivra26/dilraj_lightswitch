@@ -1,9 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="ApplicationDataStore">
-    <EntitySet Name="Table1Items" EntityType="ApplicationDataStore.Table1Item" store:Type="Tables" Schema="dbo" Table="Table1Items" />
+    <EntitySet Name="Customers" EntityType="ApplicationDataStore.Customer" store:Type="Tables" Schema="dbo" Table="Customers" />
+    <EntitySet Name="Loans" EntityType="ApplicationDataStore.Loan" store:Type="Tables" Schema="dbo" Table="Loans" />
+    <EntitySet Name="Loan_Pays" EntityType="ApplicationDataStore.Loan_Pay" store:Type="Tables" Schema="dbo" Table="Loan_Pays" />
+    <AssociationSet Name="Customer_Loan" Association="ApplicationDataStore.Customer_Loan">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Loan" EntitySet="Loans" />
+    </AssociationSet>
+    <AssociationSet Name="Loan_Loan_Pay" Association="ApplicationDataStore.Loan_Loan_Pay">
+      <End Role="Loan" EntitySet="Loans" />
+      <End Role="Loan_Pay" EntitySet="Loan_Pays" />
+    </AssociationSet>
+    <AssociationSet Name="Customer_Loan_Pay" Association="ApplicationDataStore.Customer_Loan_Pay">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Loan_Pay" EntitySet="Loan_Pays" />
+    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Table1Item">
+  <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -21,4 +35,67 @@
     <Property Name="zipcode" Type="float" Nullable="false" />
     <Property Name="picture" Type="varbinary(max)" />
   </EntityType>
+  <EntityType Name="Loan">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="loan_amount" Type="int" Nullable="false" />
+    <Property Name="interest" Type="int" Nullable="false" />
+    <Property Name="items" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="weight" Type="float" Nullable="false" />
+    <Property Name="laon_date" Type="datetime" Nullable="false" />
+    <Property Name="note" Type="nvarchar" MaxLength="255" />
+    <Property Name="status" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Customer_Loan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Loan_Pay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="amount_paid" Type="int" Nullable="false" />
+    <Property Name="paid_date" Type="datetime" Nullable="false" />
+    <Property Name="Customer_Loan_Pay" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Customer_Loan">
+    <End Role="Customer" Type="ApplicationDataStore.Customer" Multiplicity="1" />
+    <End Role="Loan" Type="ApplicationDataStore.Loan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loan">
+        <PropertyRef Name="Customer_Loan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Loan_Loan_Pay">
+    <End Role="Loan" Type="ApplicationDataStore.Loan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Loan_Pay" Type="ApplicationDataStore.Loan_Pay" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Loan">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loan_Pay">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Customer_Loan_Pay">
+    <End Role="Customer" Type="ApplicationDataStore.Customer" Multiplicity="1" />
+    <End Role="Loan_Pay" Type="ApplicationDataStore.Loan_Pay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Loan_Pay">
+        <PropertyRef Name="Customer_Loan_Pay" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

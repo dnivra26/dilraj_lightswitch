@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping CdmEntityContainer="ApplicationDataObjectContext" StorageEntityContainer="ApplicationDataStore">
-    <EntitySetMapping Name="Table1Items">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Table1Item)">
-        <MappingFragment StoreEntitySet="Table1Items">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Customer)">
+        <MappingFragment StoreEntitySet="Customers">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -17,6 +17,33 @@
           <ScalarProperty Name="country" ColumnName="country" />
           <ScalarProperty Name="zipcode" ColumnName="zipcode" />
           <ScalarProperty Name="picture" ColumnName="picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loans">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Loan)">
+        <MappingFragment StoreEntitySet="Loans">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="loan_amount" ColumnName="loan_amount" />
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="items" ColumnName="items" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="laon_date" ColumnName="laon_date" />
+          <ScalarProperty Name="Customer_Loan" ColumnName="Customer_Loan" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loan_Pays">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Loan_Pay)">
+        <MappingFragment StoreEntitySet="Loan_Pays">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="amount_paid" ColumnName="amount_paid" />
+          <ScalarProperty Name="paid_date" ColumnName="paid_date" />
+          <ScalarProperty Name="Customer_Loan_Pay" ColumnName="Customer_Loan_Pay" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
